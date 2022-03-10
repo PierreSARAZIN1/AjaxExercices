@@ -1,0 +1,10 @@
+
+
+var deleteElementLine = document.getElementById("line:<%= @email.id %>");
+var objectPosition = document.getElementById("selected-mail-object");
+var bodyPosition = document.getElementById("selected-mail-body");
+
+objectPosition.innerHTML= "Sélectionner un email";
+bodyPosition.innerHTML= "";
+deleteElementLine.remove();
+

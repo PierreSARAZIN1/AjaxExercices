@@ -1,0 +1,29 @@
+<%# alert("le fichier JS est exécuté!"); %>
+
+<%# variable de la tache à ajouter  %>
+var task = document.getElementById("task-list")
+var category = document.getElementById("category-list")
+var categoryChoice = document.getElementById("Category")
+var categoryCard = document.getElementsByClassName("card")
+
+<%# console.log(categoryCard[0])
+console.log(categoryCard[1])
+console.log(categoryCard[2])
+console.log(categoryChoice.value)
+console.log(category.value)
+console.log(task) 
+console.log(categoryCard[0].firstElementChild)
+console.log(categoryCard[1].firstElementChild)
+console.log(categoryCard[2].firstElementChild)%>
+console.log(category.value)
+
+if (categoryChoice.value == 1){
+    categoryCard[0].firstElementChild.insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
+} else if (categoryChoice.value == 2){
+    categoryCard[1].firstElementChild.insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
+} else if (categoryChoice.value == 3){
+    categoryCard[2].firstElementChild.insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");
+}
+
+
+

@@ -1,0 +1,25 @@
+<h1 class="text-center mb-4">Welcome to GMal</h1>
+
+<div class="container" style ="text-align: center">
+<a href="<%= emails_path %>" data-method="post" data-remote="true" class="btn btn-outline-secondary">Recevoir un email</a>
+</div>
+<br>
+<div class="container">
+    <table class="table table table-bordered table-dark" >
+    <thead>
+        <tr>
+        <th scope="col">Tous les emails</th>
+        <th id="selected-mail-object" scope="col">Email sélectionné</th>
+        </tr>
+    </thead>
+    <tbody id="email-list">
+        <% @emails.each do |email|  %>
+        <tr class="email-line" id="line:<%= email.id %>">
+        <td id="email.<%=email.id %>"> <a href="<%= email_path(email.id)%>" data-method="get" data-remote="true"><%= email.object %></a> </td>
+        <td id="selected-mail-body"> </td>
+        </tr>
+    <% end %>
+    </tbody>
+    
+    </table>
+</div>

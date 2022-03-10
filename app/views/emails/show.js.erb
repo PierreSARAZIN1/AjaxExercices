@@ -1,0 +1,13 @@
+
+
+
+
+var objectPosition = document.getElementById("selected-mail-object");
+
+var bodyPosition = document.getElementById("selected-mail-body");
+
+objectPosition.innerHTML= "";
+objectPosition.insertAdjacentHTML("beforeend", "<%= j render 'show_object_email', email: @email %>");
+
+bodyPosition.innerHTML= "";
+bodyPosition.insertAdjacentHTML("beforeend", "<%= j render 'show_email', email: @email %>");
